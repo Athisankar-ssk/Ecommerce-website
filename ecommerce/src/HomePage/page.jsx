@@ -1,25 +1,24 @@
+import useFetch from "../useFetch";
 import Commerce from "./home";
 
-import { useEffect, useState } from "react";
 
 function ProductList(){
-    const [Products, setProducts]=useState(null)
     
+    const [Products , error]=useFetch('http://localhost:3000/Products')
+
     function handleRemove(ProductId){
-        const ProductDelete=Products.filter(prod => prod.ProductId !== ProductId)
+        const ProductDelete=Products.filter(prod => prod.ProductId !== ProductId);
         setProducts(ProductDelete);
     }
 
-    useEffect(()=>{
-       fetch('http://localhost:3000/Products')
-       .then(response=>{
-        console.log(response)
-        return response.json();
-       }).then(data=>setProducts(data))
-    },[]);
+    
 
     if(!Products){
-     return <></>
+     return(
+     <>
+     {!error && <h1>Loading...</h1>}
+     <h1>{error}</h1>
+     </>) 
     }
 
     const Productmap=Products.map((prod)=>(
