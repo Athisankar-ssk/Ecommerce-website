@@ -1,0 +1,28 @@
+.product {
+  background-color: #FFFFFF;
+  max-width: 200px;
+  border: 2px solid #BDBDBD;
+  border-radius: 8px;
+  font-family: 'Times New Roman', Times, serif;
+  padding: 0.5em;
+  margin: 60px ;
+  text-align: center;
+  color: #212121;
+}
+
+.product img {
+  width: 180px;        
+  height: 180px;      
+  object-fit: contain; 
+  margin: 0 auto;
+}
+
+.full{
+  display: inline flex;
+}
+
+
+
+
+
+
