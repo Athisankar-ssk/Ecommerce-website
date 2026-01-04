@@ -16,7 +16,7 @@ function ProductList(){
     if(!Products){
      return(
      <>
-     {!error && <h1>Loading...</h1>}
+     {!error && <h1>Loading</h1>}
      <h1>{error}</h1>
      </>) 
     }
