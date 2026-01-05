@@ -4,7 +4,7 @@ import Commerce from "./home";
 
 function ProductList(){
     
-    const [Products , error]=useFetch('http://localhost:3000/Products')
+    const [Products ,setProducts, error]=useFetch('http://localhost:3000/Products')
 
     function handleRemove(ProductId){
         const ProductDelete=Products.filter(prod => prod.ProductId !== ProductId);

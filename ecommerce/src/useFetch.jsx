@@ -20,6 +20,6 @@ const useFetch=(url)=>{
        },1000)
     },[]);
 
-    return [Products , error]
+     return [Products, setProducts, error];
 }
 export default useFetch;
