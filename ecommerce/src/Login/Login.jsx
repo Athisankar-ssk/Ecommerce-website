@@ -51,7 +51,7 @@ function Login({ onSuccess }) {
         </div>
 
         <div className="mb-3">
-          <label className="form-label">Confirm Password</label>
+          <label className="form-label">Re-enter Password</label>
           <input
             value={pwd2}
             onChange={handelPassword2}
