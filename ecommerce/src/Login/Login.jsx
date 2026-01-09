@@ -24,7 +24,7 @@ function Login({ onSuccess }) {
     e.preventDefault();
 
     if (pwd1 === pwd2 && pwd1 !== "") {
-      onSuccess(); // ✅ LOGIN SUCCESS
+      onSuccess(); 
     }
   }
 

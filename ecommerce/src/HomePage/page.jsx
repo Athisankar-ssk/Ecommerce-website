@@ -1,7 +1,6 @@
 import useFetch from "../useFetch";
 import Commerce from "./home";
 
-
 function ProductList(){
     
     const [Products ,setProducts, error]=useFetch('http://localhost:3000/Products')
@@ -10,8 +9,6 @@ function ProductList(){
         const ProductDelete=Products.filter(prod => prod.ProductId !== ProductId);
         setProducts(ProductDelete);
     }
-
-    
 
     if(!Products){
      return(
